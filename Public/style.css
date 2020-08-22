@@ -1,75 +1,125 @@
 /* this file is loaded by index.html and styles the page */
 
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: sans-serif;
-    margin: 2em 1em;
-    line-height: 1.5em;
-  }
-  
-  h1 {
-    font-style: italic;
-    color: #373fff;
-    max-width: calc(100% - 5rem);
-    line-height: 1.1;
-  }
-  
-  form {
-    background-color: #eee;
-    display: grid;
-    grid-gap: 1em;
-    padding: 1em;
-    max-width: 40ch;
-  }
-  
-  input{
-    border: 1px solid silver;
-    display: block;
-    font-size: 16px;
-    margin-bottom: 10px;
-    padding: 5px;
-    width: 100%;
-  }
-  
-  form button {
-    background-color: #bbbbf2;
-    border: 2px solid currentColor;
-    border-radius: .25em;
-    cursor: pointer;
-    font-size: inherit;
-    line-height: 1.4em;
-    padding: 0.25em 1em;
-    max-width: 20ch;
-  }
-  
-  form button:hover {
-    background-color: lavender;
-  }
-  
-  /* Three image containers (use 25% for four, and 50% for two, etc) */
-  .column {
-    float: left;
-    width: 50%;
-    padding: 5px;
-  }
-  
-  /* Clear floats after image containers */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  table, th, td {
-    border: 1px solid black;
-  }
-  
-  footer {
-    margin-top: 3em;
-    padding-top: 1.5em;
-    border-top: 1px solid lightgrey;
-  }
-  
+  box-sizing: border-box;
+}
+/*From https://css-tricks.com/snippets/css/typewriter-effect/ */
+.typewriter h1 {
+  font-size: 55px;
+  color: black;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid silver; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .10em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+ 
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: silver; }
+}
+body {
+  font-family: sans-serif;
+  margin: 2em 1em;
+  line-height: 1.5em;
+  background-color: lavender;
+}
+
+h1 {
+  font-style: italic;
+  color: white;
+  max-width: calc(100% - 5rem);
+  line-height: 1.1;
+}
+
+form {
+  display: grid;
+  grid-gap: 1em;
+  padding: 1em;
+  max-width: 40ch;
+}
+
+input{
+  border: 1px solid silver;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+}
+
+form button {
+  background-color: #bbbbf2;
+  border: 2px solid currentColor;
+  border-radius: .25em;
+  cursor: pointer;
+  font-size: inherit;
+  line-height: 1.4em;
+  padding: 0.25em 1em;
+  max-width: 20ch;
+}
+
+form button:hover {
+  background-color: silver;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+table, th, td {
+  border: 4px solid black;
+
+}
+
+footer {
+  margin-top: 3em;
+  padding-top: 1.5em;
+  border-top: 1px solid lightgrey;
+}
+
+@keyframes bgcolor {
+    0% {
+        background-color: #45a3e5
+    }
+
+    30% {
+        background-color: #66bf39
+    }
+
+    60% {
+        background-color: #eb670f
+    }
+
+    90% {
+        background-color: #f35
+    }
+
+    100% {
+        background-color: #864cbf
+    }
+}
+
+body {
+    -webkit-animation: bgcolor 40s infinite;
+    animation: bgcolor 20s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}

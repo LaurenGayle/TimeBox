@@ -16,23 +16,24 @@
 
     <!-- import the webpage's client-side javascript file -->
     <script src="/script.js" defer></script>
-  </head>
+
+    <div class="typewriter"><h1>
+      TimeBox:  A way to visualize your time
+      </h1>
+    </div>
+    
   <body>
     <div class="row">
   <div class="column">
     <header>
-      <h1>A Way to Manage time</h1>
+      <h1>What do you need to do today?</h1>
     </header>
 
     <main>
 
-      <h2>Oh hi,</h2>
-
-      <p>What do you need to do today?:</p>
-
       <form>
         <label>
-          New Dream
+ 
           <input name="dream" type="text" maxlength="100" required placeholder="Type Tasks Here!">
         </label>
         <button type="submit" id="submit-dream">Add Task</button>
@@ -45,10 +46,13 @@
       </section>
   </div>
   <div class="column">
+    
+  <header>
     <h1>
-      Orgainize your thoughts:
+      Orgainize your thoughts
     </h1>
-      <table>
+  </header>
+      <table id="myTable">
         <tr>
           <th>Time</th>
           <th>Tasks</th>
@@ -107,12 +111,14 @@
           <td>  <input type="text" id="hour" name="hour"> </td>
         </tr>
       </table>
+        <br>
+    <!--  <button onclick="myCreateFunction()">Create row</button>   -->
     </div>
     </div>
-    </main>
+  </main>
       
 
-    <footer>Made with <a href="https://glitch.com">Glitch</a>!</footer>
+    <footer>Made by <a href="https://laurenelizabethgayle.weebly.com/">Lauren Gayle</a> for the Steel City Hackathon using <a href="https://glitch.com">Glitch</a>!</footer>
 
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->

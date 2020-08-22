@@ -39,3 +39,15 @@ fetch("/dreams")
       dreamsForm.elements.dream.focus();
     });
   });
+
+/*function myCreateFunction() {
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(11);
+  var cell1 = row.insertCell(11);
+  var cell2 = row.insertCell(12);
+  var cell3 = row.insertCell(13);
+  cell1.innerHTML = "INPUT";
+  cell2.innerHTML = "INPUT";
+  cell3.innerHTML = "INPUT";
+
+}*/
