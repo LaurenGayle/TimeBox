@@ -105,7 +105,7 @@ footer {
   border-top: 1px solid lightgrey;
 }
 
-/* Kahoot Colors
+/* Kahoot Colors*/
 
 @keyframes bgcolor {
     0% {
@@ -134,4 +134,4 @@ body {
     animation: bgcolor 20s infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
-}*/
+}
