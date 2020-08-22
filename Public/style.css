@@ -8,26 +8,32 @@
   font-size: 55px;
   color: black;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid black; /* The typwriter cursor */
+  border-right: 0.15em solid black; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .10em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
- 
+  letter-spacing: 0.1em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: silver; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: silver;
+  }
 }
 body {
   font-family: sans-serif;
@@ -50,7 +56,7 @@ form {
   max-width: 40ch;
 }
 
-input{
+input {
   border: 1px solid silver;
   display: block;
   font-size: 16px;
@@ -64,7 +70,7 @@ input{
 form button {
   background-color: #bbbbf2;
   border: 2px solid currentColor;
-  border-radius: .25em;
+  border-radius: 0.25em;
   cursor: pointer;
   font-size: inherit;
   line-height: 1.4em;
@@ -86,10 +92,11 @@ form button:hover {
   display: table;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 2px solid black;
   border-collapse: collapse;
-
 }
 
 footer {

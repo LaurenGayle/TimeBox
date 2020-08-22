@@ -4,39 +4,39 @@
 console.log("hello world :o");
 
 // define variables that reference elements on our page
-const dreamsList = document.getElementById("dreams");
+const dreamsList = document.getElementById("tasks");
 const dreamsForm = document.querySelector("form");
 
-// a helper function that creates a list item for a given dream
-function appendNewDream(dream) {
+// a helper function that creates a list item for a given task
+function appendNewTask(task) {
   const newListItem = document.createElement("li");
-  newListItem.innerText = dream;
+  newListItem.innerText = task;
   dreamsList.appendChild(newListItem);
 }
 
-// fetch the initial list of dreams
-fetch("/dreams")
+// fetch the initial list of tasks
+fetch("/tasks")
   .then(response => response.json()) // parse the JSON from the server
-  .then(dreams => {
+  .then(tasks => {
     // remove the loading text
     dreamsList.firstElementChild.remove();
 
-    // iterate through every dream and add it to our page
-    dreams.forEach(appendNewDream);
+    // iterate through every task and add it to our page
+    tasks.forEach(appendNewTask);
 
-    // listen for the form to be submitted and add a new dream when it is
+    // listen for the form to be submitted and add a new task when it is
     dreamsForm.addEventListener("submit", event => {
       // stop our form submission from refreshing the page
       event.preventDefault();
 
-      // get dream value and add it to the list
-      let newDream = dreamsForm.elements.dream.value;
-      dreams.push(newDream);
-      appendNewDream(newDream);
+      // get task value and add it to the list
+      let newTask = dreamsForm.elements.task.value;
+      tasks.push(newTask);
+      appendNewTask(newTask);
 
       // reset form
       dreamsForm.reset();
-      dreamsForm.elements.dream.focus();
+      dreamsForm.elements.task.focus();
     });
   });
 
